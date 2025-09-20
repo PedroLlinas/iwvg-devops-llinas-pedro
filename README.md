@@ -11,7 +11,7 @@
 
 ### Estado del código
 [![CI](https://github.com/PedroLlinas/iwvg-devops-llinas-pedro/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/PedroLlinas/iwvg-devops-llinas-pedro/actions/workflows/continuous-integration.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pedrollinas_demo-devops&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pedrollinas_demo-devops)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pedrollinas_iwvg-devops-llinas-pedro&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pedrollinas_iwvg-devops-llinas-pedro)
 [![Render broken](https://iwvg-devops-latest.onrender.com/version-badge)](https://iwvg-devops-latest.onrender.com/swagger-ui.html)
 
 
