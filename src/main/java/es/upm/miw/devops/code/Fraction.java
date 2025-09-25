@@ -58,6 +58,45 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
+    /** Fracción propia: |numerator| < |denominator| (convención habitual, independientemente del signo). */
+    public boolean isProper() {
+        return Math.abs(this.numerator) < Math.abs(this.denominator);
+    }
+
+    /** Fracción impropia: |numerator| >= |denominator|. */
+    public boolean isImproper() {
+        return Math.abs(this.numerator) >= Math.abs(this.denominator);
+    }
+
+    /**
+     * Equivalencia: a/b ≡ c/d  ⇔  a*d == b*c (cruzados).
+     * Permite denominadores negativos; no modifica los operandos.
+     */
+    public boolean isEquivalent(Fraction other) {
+        long left = (long) this.numerator * (long) other.denominator;
+        long right = (long) this.denominator * (long) other.numerator;
+        return left == right;
+    }
+
+    public Fraction add(Fraction other) {
+        int num = this.numerator * other.denominator
+                + this.denominator * other.numerator;
+        int den = this.denominator * other.denominator;
+        return new Fraction(num, den);
+    }
+
+    public Fraction multiply(Fraction other) {
+        int num = this.numerator * other.numerator;
+        int den = this.denominator * other.denominator;
+        return new Fraction(num, den);
+    }
+
+    public Fraction divide(Fraction other) {
+        int num = this.numerator * other.denominator;
+        int den = this.denominator * other.numerator;
+        return new Fraction(num, den);
+    }
+
     @Override
     public String toString() {
         return "Fraction{" +
