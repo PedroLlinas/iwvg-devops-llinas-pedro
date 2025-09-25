@@ -1,4 +1,3 @@
-
 package es.upm.miw.devops.code;
 
 /**
@@ -26,6 +25,7 @@ package es.upm.miw.devops.code;
  * medios. Invertir fraccion
  */
 public class Fraction {
+
     private int numerator;
     private int denominator;
 
