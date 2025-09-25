@@ -115,7 +115,7 @@ class FractionTest {
         Fraction b = new Fraction(1, 2);    //  1/2
         Fraction result = a.add(b);         // -1/2 + 1/2 = 0/1
         assertThat(result.getNumerator()).isZero();
-        assertThat(result.getDenominator()).isEqualTo(-4);
+        assertThat(result.getDenominator()).isEqualTo(1);
     }
 
     @Test
