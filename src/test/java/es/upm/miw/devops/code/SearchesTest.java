@@ -47,4 +47,10 @@ class SearchesTest {
                 .returns(-1, Fraction::getNumerator)
                 .returns(5, Fraction::getDenominator);
     }
+
+    @Test
+    void testFindUserNameBySomeImproperFraction() {
+        assertThat(new Searches().findUserNameBySomeImproperFraction().toList())
+                .containsExactly("Oscar", "Ana", "Paula");
+    }
 }
