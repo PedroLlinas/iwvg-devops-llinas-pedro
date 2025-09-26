@@ -31,4 +31,11 @@ class SearchesTest {
                 .returns(-15, Fraction::getNumerator)
                 .returns(1, Fraction::getDenominator);
     }
+
+    @Test
+    void testFindDecimalFractionByNegativeSignFraction() {
+        // Con el poblador dado, las fracciones negativas son: -1/5 y 3/-6 → [-0.2, -0.5]
+        assertThat(new Searches().findDecimalFractionByNegativeSignFraction().toList())
+                .containsExactly(-0.2, -0.5);
+    }
 }
