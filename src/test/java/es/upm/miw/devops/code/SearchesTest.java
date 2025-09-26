@@ -38,4 +38,13 @@ class SearchesTest {
         assertThat(new Searches().findDecimalFractionByNegativeSignFraction().toList())
                 .containsExactly(-0.2, -0.5);
     }
+
+    @Test
+    void testFindFirstProperFractionByUserId() {
+        // Para el usuario "2" del poblador: [2/1, -1/5, 2/4, 4/3] -> primera propia: -1/5
+        assertThat(new Searches().findFirstProperFractionByUserId("2"))
+                .isNotNull()
+                .returns(-1, Fraction::getNumerator)
+                .returns(5, Fraction::getDenominator);
+    }
 }
