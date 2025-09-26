@@ -53,6 +53,7 @@ public class Searches {
     }
 
     public Stream<String> findUserNameBySomeImproperFraction() {
+        // Arreglo de errores
         return new UsersDatabase().findAll()
                 .filter(user -> user.getFractions().stream()
                         .filter(Objects::nonNull)
