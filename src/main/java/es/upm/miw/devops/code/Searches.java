@@ -52,4 +52,12 @@ public class Searches {
                 .orElse(null);
     }
 
+    public Stream<String> findUserNameBySomeImproperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .filter(Objects::nonNull)
+                        .anyMatch(f -> f.getDenominator() != 0 && f.isImproper()))
+                .map(User::getName)
+                .distinct();
+    }
 }
